@@ -129,6 +129,7 @@ namespace MiniSupermarket.BUS
             };
             return Connection.Execute(storedProcedure, parameters).Rows[0].ItemArray[0].ToString();
         }
+
         public Boolean ClearAllProductInDetailOrder(string OrderID)
         {
             string storedProcedure = "ClearAllProductInDetailOrder";

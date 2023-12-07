@@ -1084,6 +1084,7 @@ BEGIN
 END;
 GO
 
+
 -- Thêm sản phẩm vào chi tiết phiếu nhập
 CREATE PROC AddProductToDetailOrder
 	@Order varchar(10),
@@ -1161,11 +1162,12 @@ BEGIN
 END;
 GO
 
+-- Xoá tất cả sản phẩm trong phiếu nhập
 CREATE PROC ClearAllProductInDetailOrder
 	@OrderID varchar(10)
 AS
 BEGIN
-	DELETE FROM DetailPurchaseOrder WHERE @OrderID = @OrderID
+	DELETE FROM DetailPurchaseOrder WHERE OrderID = @OrderID
 END;
 GO
 
